@@ -1,0 +1,38 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<form>
+
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Equipo</th>
+                <th>Descripción</th>
+                <th>Marca</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (ViewData["listadoEquipos"] != null)
+            {
+                foreach (var equipo in (IEnumerable<dynamic>)ViewData["listadoEquipos"])
+                {
+                    <tr>
+                        <td>@equipo.nombre</td>
+                        <td>@equipo.descripcion</td>
+                        <td>@equipo.marca_nombre</td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr><td colspan="3">No hay equipos disponibles.</td></tr>
+            }
+        </tbody>
+    </table>
+
+
+</form>
