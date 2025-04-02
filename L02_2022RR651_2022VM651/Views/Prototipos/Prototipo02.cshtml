@@ -1,0 +1,85 @@
+﻿@model IEnumerable<L02_2022RR651_2022VM651.Models.libros>
+
+@{
+    ViewData["Title"] = "Seleccionar Libro";
+}
+
+<div class="container">
+    <h2 class="text-center">Comentarios por Libros</h2>
+    <p class="text-center">Seleccione un libro del autor para ver los comentarios existentes.</p>
+
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="step completed">1</div>
+        <div class="line completed"></div>
+        <div class="step active">2</div>
+        <div class="line"></div>
+        <div class="step">3</div>
+        <div class="line"></div>
+        <div class="step">4</div>
+    </div>
+
+    <br />
+
+    <!-- Autor -->
+    <div class="card">
+        <div class="card-body">
+            <h4><strong>Autor:</strong> <span class="text-primary">@ViewBag.AutorSeleccionado</span></h4>
+        </div>
+    </div>
+
+    <br />
+
+    <!-- Tabla de Libros -->
+    <div class="card">
+        <div class="card-body">
+            <h5 class="text-primary">Seleccione el Libro del autor</h5>
+            <table class="table">
+                <tbody>
+                    @foreach (var libro in Model)
+                    {
+                        <tr>
+                            <td>@libro.nombre</td>
+                            <td class="text-end">
+                                <a asp-controller="Prototipo03" asp-action="Index" asp-route-idLibro="@libro.id" class="btn btn-success">Seleccionar</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Estilos para la Progress Bar -->
+<style>
+    .progress-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .step {
+        width: 40px;
+        height: 40px;
+        background-color: #ccc;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+    }
+    .line {
+        width: 50px;
+        height: 5px;
+        background-color: #ccc;
+    }
+    .completed {
+        background-color: green;
+        color: white;
+    }
+    .active {
+        background-color: #007bff;
+        color: white;
+    }
+</style>
