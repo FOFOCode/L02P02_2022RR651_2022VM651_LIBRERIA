@@ -34,8 +34,11 @@
                                 <td>@autor.id</td>
                                 <td>@autor.autor</td>
                                 <td>
-                                    <button class="btn btn-success">Seleccionar</button>
+                                    <a asp-controller="Prototipo02" asp-action="Index" asp-route-idAutor="@autor.id" class="btn btn-success">
+                                        Seleccionar
+                                    </a>
                                 </td>
+
                             </tr>
                         }
                     }
