@@ -41,7 +41,7 @@
                         <tr>
                             <td>@libro.nombre</td>
                             <td class="text-end">
-                                <a asp-controller="Prototipo03" asp-action="Index" asp-route-idLibro="@libro.id" class="btn btn-success">Seleccionar</a>
+                                <a asp-controller="Prototipo03" asp-action="Index" asp-route-idLibro="@libro.id" asp-route-idAutor="@libro.id_autor" class="btn btn-success">Seleccionar</a>
                             </td>
                         </tr>
                     }
