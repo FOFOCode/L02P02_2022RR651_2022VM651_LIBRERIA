@@ -1,38 +1,52 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "Comentarios por Libros - Listado de Autores";
 }
 
-<form>
+<div class="container">
 
 
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>Equipo</th>
-                <th>Descripción</th>
-                <th>Marca</th>
-            </tr>
-        </thead>
-        <tbody>
-            @if (ViewData["listadoEquipos"] != null)
-            {
-                foreach (var equipo in (IEnumerable<dynamic>)ViewData["listadoEquipos"])
-                {
+    <div class="row">
+        <div class="col-12">
+
+            
+            <ul class="progressbar text-center">
+                <li class="active">Autores</li>
+                <li>Libros</li>
+                <li>Comentarios Existentes</li>
+                <li>Nuevo Comentario</li>
+            </ul>
+
+            <h4 style="color:cornflowerblue;">Autor</h4>
+            <table class="table table-striped">
+                <thead>
                     <tr>
-                        <td>@equipo.nombre</td>
-                        <td>@equipo.descripcion</td>
-                        <td>@equipo.marca_nombre</td>
+                        <th>ID</th>
+                        <th>Nombre del Autor</th>
+                        <th>Acciones</th>
                     </tr>
-                }
-            }
-            else
-            {
-                <tr><td colspan="3">No hay equipos disponibles.</td></tr>
-            }
-        </tbody>
-    </table>
-
-
-</form>
+                </thead>
+                <tbody>
+                    @if (ViewData["listadoDeAutores"] != null && ((IEnumerable<dynamic>)ViewData["listadoDeAutores"]).Any())
+                    {
+                        foreach (var autor in (IEnumerable<dynamic>)ViewData["listadoDeAutores"])
+                        {
+                            <tr>
+                                <td>@autor.id</td>
+                                <td>@autor.autor</td>
+                                <td>
+                                    <button class="btn btn-success">Seleccionar</button>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="3" class="text-center">No hay autores registrados.</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

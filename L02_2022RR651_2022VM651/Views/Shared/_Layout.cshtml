@@ -8,27 +8,61 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/L02_2022RR651_2022VM651.styles.css" asp-append-version="true" />
 </head>
+<style>
+    header {
+        background-color: #343a40;
+        color: white;
+        width: 100%;
+        height: 210px;
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        padding:40px;
+    }
+
+    .footer{
+        background-color: #343a40;
+        color: white;
+        width: 100%;
+        height: 100px
+    }
+
+    .imagen{
+        background: transparent; 
+        border: none; 
+    }
+
+    .header-section {
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+        .header-section img {
+            width: 80px;
+            height: 80px;
+            margin-top: 20px;
+        }
+
+    .header-title {
+        font-size: 2em; 
+        margin: 20px 0;
+    }
+
+    .header-subtitle {
+        font-size: 1.2em; 
+        margin: 10px 0;
+    }
+
+</style>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">L02_2022RR651_2022VM651</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
+       
+            <div class="header-section">
+                <img class="imagen" src="https://i.ibb.co/yBMrd1wb/LOGO-UNICAES.jpg" />
+                <h4 class="header-title">Comentarios por Libros</h4>
+                <p class="header-subtitle">Seleccione el autor -> Seleccione el Libro -> Se muestran los comentarios existentes -> Adicione un nuevo comentario</p>
             </div>
-        </nav>
+
     </header>
     <div class="container">
         <main role="main" class="pb-3">
@@ -36,11 +70,9 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - L02_2022RR651_2022VM651 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
+    <div class="footer text-center">
+        <p>2025-1-04 - Paola Valeria Vidal Magaña, 2025-1-04 - Rodolfo Rivas Rodriguez</p>
+    </div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
