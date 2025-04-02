@@ -20,7 +20,6 @@
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th>ID</th>
                         <th>Nombre del Autor</th>
                         <th>Acciones</th>
                     </tr>
@@ -31,7 +30,6 @@
                         foreach (var autor in (IEnumerable<dynamic>)ViewData["listadoDeAutores"])
                         {
                             <tr>
-                                <td>@autor.id</td>
                                 <td>@autor.autor</td>
                                 <td>
                                     <a asp-controller="Prototipo02" asp-action="Index" asp-route-idAutor="@autor.id" class="btn btn-success">
