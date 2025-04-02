@@ -16,7 +16,7 @@ namespace L02_2022RR651_2022VM651.Models
         public int id_autor { get; set; }
         public int id_categoria { get; set; }
         [Display(Name = "Precio")]
-        public double precio { get; set; }
+        public decimal precio { get; set; }
         [Display(Name = "Estado")]
         public string estado { get; set; }
     }

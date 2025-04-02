@@ -11,3 +11,4 @@ namespace L02_2022RR651_2022VM651.Models
         public string? autor { get; set; }
     }
 }
+ 
