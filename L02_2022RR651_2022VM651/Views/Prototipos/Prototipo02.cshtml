@@ -8,16 +8,13 @@
     <h2 class="text-center">Comentarios por Libros</h2>
     <p class="text-center">Seleccione un libro del autor para ver los comentarios existentes.</p>
 
-    <!-- Progress Bar -->
-    <div class="progress-container">
-        <div class="step completed">1</div>
-        <div class="line completed"></div>
-        <div class="step active">2</div>
-        <div class="line"></div>
-        <div class="step">3</div>
-        <div class="line"></div>
-        <div class="step">4</div>
-    </div>
+    
+    <ul class="progressbar text-center">
+        <li>Autores</li>
+        <li class="active">Libros</li>
+        <li >Comentarios Existentes</li>
+        <li>Nuevo Comentario</li>
+    </ul>
 
     <br />
 
@@ -42,6 +39,7 @@
                             <td>@libro.nombre</td>
                             <td class="text-end">
                                 <a asp-controller="Prototipo03" asp-action="Index" asp-route-idLibro="@libro.id" asp-route-idAutor="@libro.id_autor" class="btn btn-success">Seleccionar</a>
+
                             </td>
                         </tr>
                     }
@@ -51,35 +49,3 @@
     </div>
 </div>
 
-<!-- Estilos para la Progress Bar -->
-<style>
-    .progress-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 20px;
-    }
-    .step {
-        width: 40px;
-        height: 40px;
-        background-color: #ccc;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-    }
-    .line {
-        width: 50px;
-        height: 5px;
-        background-color: #ccc;
-    }
-    .completed {
-        background-color: green;
-        color: white;
-    }
-    .active {
-        background-color: #007bff;
-        color: white;
-    }
-</style>

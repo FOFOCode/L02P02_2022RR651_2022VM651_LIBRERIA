@@ -30,6 +30,7 @@ namespace L02_2022RR651_2022VM651.Controllers
 
             return View("~/Views/Prototipos/Prototipo03.cshtml", comentarios);
         }
+
         [HttpPost]
         public IActionResult AgregarComentario(int idLibro, string contenido)
         {
@@ -50,12 +51,10 @@ namespace L02_2022RR651_2022VM651.Controllers
             _libreriaDbContext.comentarios_libros.Add(nuevoComentario);
             _libreriaDbContext.SaveChanges();
 
-            // Redirigir a la página con la barra de progreso actualizada
-            TempData["ComentarioAgregado"] = true;
             return RedirectToAction("Index", new { idLibro });
         }
 
-         
+       
 
     }
 }
