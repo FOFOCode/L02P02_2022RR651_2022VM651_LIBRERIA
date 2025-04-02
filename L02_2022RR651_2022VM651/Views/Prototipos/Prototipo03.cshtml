@@ -1,0 +1,59 @@
+﻿<div class="container mt-5 d-flex flex-column">
+    <!-- Título de la página -->
+    <h2 class="text-center">Comentarios de Libros</h2>
+
+    <!-- Barra de progreso de navegación -->
+    <ul class="progressbar text-center">
+        <li>Autores</li>
+        <li>Libros</li>
+        <li class="active">Comentarios Existentes</li>
+        <li>Nuevo Comentario</li>
+    </ul>
+
+    <!-- Información del libro, autor y separación -->
+    <div class="mt-4 d-flex justify-content-center">
+        <div class="mr-5">
+            <h5>Autor: <strong>Nombre del Autor Seleccionado</strong></h5>
+        </div>
+        <div>
+            <h5>Libro: <strong>Nombre del Libro Seleccionado</strong></h5>
+        </div>
+    </div>
+
+    <!-- Comentarios existentes y formulario alineados al mismo nivel -->
+    <div class="d-flex mt-4 justify-content-between">
+        <!-- Comentarios existentes -->
+        <div class="flex-fill mr-4">
+            
+            <ul class="list-group mb-3">
+                <li class="list-group-item">Comentario 1<br><small>Usuario | Fecha</small></li>
+                <li class="list-group-item">Comentario 2<br><small>Usuario | Fecha</small></li>
+                <li class="list-group-item">Comentario 3<br><small>Usuario | Fecha</small></li>
+                <li class="list-group-item">Comentario 4<br><small>Usuario | Fecha</small></li>
+            </ul>
+        </div>
+
+        <!-- Formulario para agregar un nuevo comentario -->
+        <div class="card flex-fill w-100">
+            <div class="card-body">
+                <h6 class="card-title">Agregar un Comentario</h6>
+                <form>
+                    <div class="form-group">
+                        <label for="comentario">Comentario</label>
+                        <textarea class="form-control" id="comentario" rows="3" placeholder="Contenido del comentario añadido"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success mt-4">Guardar Comentario</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+
+    .list-group-item {
+        border-color: 0.5px solid black;
+        padding: 10px 15px;
+    }
+</style>
