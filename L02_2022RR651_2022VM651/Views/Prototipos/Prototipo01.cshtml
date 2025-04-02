@@ -3,12 +3,8 @@
 }
 
 <div class="container">
-
-
     <div class="row">
         <div class="col-12">
-
-            
             <ul class="progressbar text-center">
                 <li class="active">Autores</li>
                 <li>Libros</li>
@@ -34,7 +30,8 @@
                                 <td>@autor.id</td>
                                 <td>@autor.autor</td>
                                 <td>
-                                    <button class="btn btn-success">Seleccionar</button>
+                                    <a href="@Url.Action("Prototipo02", "Prototipo01", new { idAutor = autor.id })" class="btn btn-success">Seleccionar</a>
+
                                 </td>
                             </tr>
                         }

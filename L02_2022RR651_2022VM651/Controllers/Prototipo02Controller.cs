@@ -18,11 +18,11 @@ namespace L02_2022RR651_2022VM651.Controllers
          {
             int idAutor = 1;
 
-            var libros = await _context.Libros
+            var libros = await _context.libros
                 .Where(l => l.id_autor == idAutor)
                 .ToListAsync();
 
-            ViewBag.AutorSeleccionado = await _context.Autores
+            ViewBag.AutorSeleccionado = await _context.autores
                 .Where(a => a.id == idAutor)
                 .Select(a => a.autor)
                 .FirstOrDefaultAsync();
